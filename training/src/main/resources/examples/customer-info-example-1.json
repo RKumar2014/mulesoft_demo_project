@@ -1,0 +1,31 @@
+[
+    {
+        "customerNumber": 103,
+        "country": "France",
+        "contactFirstName": "Carine ",
+        "city": "Nantes",
+        "contactLastName": "Schmitt",
+        "phone": "40.32.2555",
+        "postalCode": "44000",
+        "addressLine2": null,
+        "addressLine1": "54, rue Royale",
+        "salesRepEmployeeNumber": 1370,
+        "state": null,
+        "customerName": "Atelier graphique",
+        "creditLimit": 21000
+    },
+    {
+        "customerNumber": 112,
+        "country": "USA",
+        "contactFirstName": "Jean",
+        "city": "Las Vegas",
+        "contactLastName": "King",
+        "phone": "7025551838",
+        "postalCode": "83030",
+        "addressLine2": null,
+        "addressLine1": "8489 Strong St.",
+        "salesRepEmployeeNumber": 1166,
+        "state": "NV",
+        "customerName": "Signal Gift Stores",
+        "creditLimit": 71800
+    }]

@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<types:mule xmlns:types="http://www.mulesoft.org/schema/mule/types">
+  <types:catalog>
+    <types:type name="american_flights_json" format="json">
+      <types:shape format="weave" example="examples/customer-info-example-1.json"><![CDATA[%dw 2.0
+
+type american_flights_json = Array<{|  customerNumber: Number {"typeId": "int"},   country: String,   contactFirstName: String,   city: String,   contactLastName: String,   phone: String,   postalCode: String,   addressLine2: Null,   addressLine1: String,   salesRepEmployeeNumber: Number {"typeId": "int"},   state: Null,   customerName: String,   creditLimit: Number {"typeId": "int"}|}> {"example": "[{\\\"customerNumber\\\":103,\\\"country\\\":\\\"France\\\",\\\"contactFirstName\\\":\\\"Carine \\\",\\\"city\\\":\\\"Nantes\\\",\\\"contactLastName\\\":\\\"Schmitt\\\",\\\"phone\\\":\\\"40.32.2555\\\",\\\"postalCode\\\":\\\"44000\\\",\\\"addressLine2\\\":null,\\\"addressLine1\\\":\\\"54, rue Royale\\\",\\\"salesRepEmployeeNumber\\\":1370,\\\"state\\\":null,\\\"customerName\\\":\\\"Atelier graphique\\\",\\\"creditLimit\\\":21000},{\\\"customerNumber\\\":112,\\\"country\\\":\\\"USA\\\",\\\"contactFirstName\\\":\\\"Jean\\\",\\\"city\\\":\\\"Las Vegas\\\",\\\"contactLastName\\\":\\\"King\\\",\\\"phone\\\":\\\"7025551838\\\",\\\"postalCode\\\":\\\"83030\\\",\\\"addressLine2\\\":null,\\\"addressLine1\\\":\\\"8489 Strong St.\\\",\\\"salesRepEmployeeNumber\\\":1166,\\\"state\\\":\\\"NV\\\",\\\"customerName\\\":\\\"Signal Gift Stores\\\",\\\"creditLimit\\\":71800}]"}
+
+]]></types:shape>
+    </types:type>
+  </types:catalog>
+  <types:enrichment select="#31f2b7f5-b40f-4728-9752-d736a7b63821">
+    <types:processor-declaration>
+      <types:output-event>
+        <types:message>
+          <types:payload type="american_flights_json"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+  <types:enrichment select="#ff75eaf1-9c90-490e-afa0-d4dccda536e3">
+    <types:processor-declaration>
+      <types:output-event>
+        <types:message>
+          <types:payload type="american_flights_json"/>
+        </types:message>
+      </types:output-event>
+    </types:processor-declaration>
+  </types:enrichment>
+</types:mule>
