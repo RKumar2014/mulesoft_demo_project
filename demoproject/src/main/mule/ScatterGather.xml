@@ -53,7 +53,7 @@ payload]]></ee:set-payload>
 	</flow>
 	<flow name="Flow2" doc:id="52f01c19-4b51-4f9f-9c76-ba9946ce6055" >
 		<file:read doc:name="Read" doc:id="67f64428-e154-4414-91d5-5e30d6af62e1" path="C:\Users\reesh\AnypointStudio\studio-workspace\training\src\main\resources\name-two.json"/>
-		<logger level="INFO" doc:name="Logger" doc:id="564ea92b-5341-47cd-a8cb-e741e0c11a06" message="Reading from the  file two #[payload]"/>
+		<logger level="INFO" doc:name="Logger" doc:id="564ea92b-5341-47cd-a8cb-e741e0c11a06" message="Reading from the file two #[payload]"/>
 		<ee:transform doc:name="Transform Message" doc:id="5292f972-3e59-47e2-93d1-0a2298e46d12">
 			<ee:message>
 				<ee:set-payload><![CDATA[%dw 2.0
