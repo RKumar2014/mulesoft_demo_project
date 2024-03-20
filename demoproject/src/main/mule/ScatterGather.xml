@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:file="http://www.mulesoft.org/schema/mule/file" xmlns:tracking="http://www.mulesoft.org/schema/mule/ee/tracking"
+	xmlns:ftpserver="http://www.mulesoft.org/schema/mule/ftpserver"
+	xmlns:ftp="http://www.mulesoft.org/schema/mule/ftp" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core" xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+http://www.mulesoft.org/schema/mule/ftp http://www.mulesoft.org/schema/mule/ftp/current/mule-ftp.xsd
+http://www.mulesoft.org/schema/mule/ftpserver http://www.mulesoft.org/schema/mule/ftpserver/current/mule-ftpserver.xsd
+http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd
+http://www.mulesoft.org/schema/mule/file http://www.mulesoft.org/schema/mule/file/current/mule-file.xsd">
+	<http:listener-config name="HTTP_Listener_config" doc:name="HTTP Listener config" doc:id="8d9ada44-33b9-4a0d-bbc7-cba233bbde7f" >
+		<http:listener-connection host="localhost" port="8081" />
+	</http:listener-config>
+	<db:config name="Database_Config" doc:name="Database Config" doc:id="6574e3c1-6b63-425b-9649-c42a866fcf7f" >
+		<db:my-sql-connection host="localhost" port="3306" user="root" password="admin" database="classicmodels" />
+	</db:config>
+	<flow name="ScatterGather" doc:id="31f2b7f5-b40f-4728-9752-d736a7b63821" >
+		<http:listener doc:name="Listener" doc:id="925b8838-35cb-481e-9682-ee678da14d7b" config-ref="HTTP_Listener_config" path="/flights"/>
+		<set-variable value="#[payload]" doc:name="Set Variable" doc:id="9125538c-cfbe-4a69-9cc6-1ec501aef09a" variableName="mypayload"/>
+		<logger level="INFO" doc:name="Logger" doc:id="7acf65ba-8119-4811-9987-411b310a62e3" message="this is message from logger #[payload] and mypayload #[vars.mypayload]"/>
+		<scatter-gather doc:name="Scatter-Gather" doc:id="173aa917-1c2d-4311-b05a-a1d1378b82ce" >
+			<route >
+				<flow-ref doc:name="Flow Reference" doc:id="63f3f4b3-360d-4d6f-9af1-3ebc79689344" name="Flow1"/>
+			</route>
+			<route >
+				<flow-ref doc:name="Flow Reference" doc:id="fe38ad22-37a7-4a7b-a08b-aed162c0c59c" name="Flow2" />
+			</route>
+		</scatter-gather>
+		<logger level="INFO" doc:name="Logger" doc:id="78d8958b-7271-42d3-9b1e-f9484c0a6091" message="Aggregated payload #[payload]"/>
+		<ee:transform doc:name="Transform Message" doc:id="7027fed3-15d2-4e39-9036-f369430f69bf">
+					<ee:message>
+						<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+flatten(payload..payload)]]></ee:set-payload>
+					</ee:message>
+				</ee:transform>
+	</flow>
+	<flow name="Flow1" doc:id="e76b37d5-0135-4d7b-9fd2-5e5b53dbd748" >
+		<file:read doc:name="Read" doc:id="6e1b2efa-6a7c-49f8-9225-bf61198d3abe" path="C:\Users\reesh\AnypointStudio\studio-workspace\training\src\main\resources\name.json"/>
+		<set-variable value="#[payload]" doc:name="Set Variable" doc:id="b99fe4ca-81ce-46c6-92e9-44c937ea5071" variableName="readfileone"/>
+		<logger level="INFO" doc:name="Logger" doc:id="e8374ca4-571c-41e4-b1f4-4d2a6e2e95b2" message="Reading file one #[payload]"/>
+		<ee:transform doc:name="Transform Message" doc:id="1fa582d1-34aa-4cd5-acf8-3d621335fdf5" >
+			<ee:message >
+				<ee:set-payload ><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+	<flow name="Flow2" doc:id="52f01c19-4b51-4f9f-9c76-ba9946ce6055" >
+		<file:read doc:name="Read" doc:id="67f64428-e154-4414-91d5-5e30d6af62e1" path="C:\Users\reesh\AnypointStudio\studio-workspace\training\src\main\resources\name-two.json"/>
+		<logger level="INFO" doc:name="Logger" doc:id="564ea92b-5341-47cd-a8cb-e741e0c11a06" message="Reading from the  file two #[payload]"/>
+		<ee:transform doc:name="Transform Message" doc:id="5292f972-3e59-47e2-93d1-0a2298e46d12">
+			<ee:message>
+				<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+payload]]></ee:set-payload>
+			</ee:message>
+		</ee:transform>
+	</flow>
+</mule>
