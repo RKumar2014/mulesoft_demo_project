@@ -1,0 +1,417 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet" xmlns:c="urn:schemas-microsoft-com:office:component:spreadsheet" xmlns:html="http://www.w3.org/TR/REC-html40" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet" xmlns:x2="http://schemas.microsoft.com/office/excel/2003/xml" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office"> <Colors> <Color> <Index>3</Index> <RGB>#c0c0c0</RGB> </Color> <Color> <Index>4</Index> <RGB>#ff0000</RGB> </Color> </Colors> </OfficeDocumentSettings> <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel"> <WindowHeight>9000</WindowHeight> <WindowWidth>13860</WindowWidth> <WindowTopX>240</WindowTopX> <WindowTopY>75</WindowTopY> <ProtectStructure>False</ProtectStructure> <ProtectWindows>False</ProtectWindows> </ExcelWorkbook> <Styles> <Style ss:ID="Default" ss:Name="Default"/> <Style ss:ID="Result" ss:Name="Result"> <Font ss:Bold="1" ss:Italic="1" ss:Underline="Single"/> </Style> <Style ss:ID="Result2" ss:Name="Result2"> <Font ss:Bold="1" ss:Italic="1" ss:Underline="Single"/> <NumberFormat ss:Format="Currency"/> </Style> <Style ss:ID="Heading" ss:Name="Heading"> <Font ss:Bold="1" ss:Italic="1" ss:Size="16"/> </Style> <Style ss:ID="Heading1" ss:Name="Heading1"> <Font ss:Bold="1" ss:Italic="1" ss:Size="16"/> </Style><Style ss:ID="co1"/> <Style ss:ID="ta1"/> </Styles>
+<ss:Worksheet ss:Name="trc_codes">
+<Table>
+<x:WorksheetOptions/>
+<Row>
+<Cell><Data ss:Type="String">Type of Time</Data></Cell>
+<Cell><Data ss:Type="String">TRC Code</Data></Cell>
+<Cell><Data ss:Type="String">Definition</Data></Cell>
+<Cell><Data ss:Type="String">Counts Towards Schedule?</Data></Cell>
+<Cell><Data ss:Type="String">Workgroup 2</Data></Cell>
+<Cell><Data ss:Type="String">Workgroup E</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Regular Time</Data></Cell>
+<Cell><Data ss:Type="String">ATO</Data></Cell>
+<Cell><Data ss:Type="String">Administrative Time Off</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">ATO</Data></Cell>
+<Cell><Data ss:Type="String">ATO</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Regular Time</Data></Cell>
+<Cell><Data ss:Type="String">REG</Data></Cell>
+<Cell><Data ss:Type="String">Regular Pay</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">REG</Data></Cell>
+<Cell><Data ss:Type="String">REG</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">AL</Data></Cell>
+<Cell><Data ss:Type="String">Annual Leave Used</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">AL</Data></Cell>
+<Cell><Data ss:Type="String">AL</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">BL</Data></Cell>
+<Cell><Data ss:Type="String">Bereavement Leave</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">BL</Data></Cell>
+<Cell><Data ss:Type="String">BL</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">CT</Data></Cell>
+<Cell><Data ss:Type="String">CTO Used</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">CT</Data></Cell>
+<Cell><Data ss:Type="String">CT</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">EX</Data></Cell>
+<Cell><Data ss:Type="String">Excess Used</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">EX</Data></Cell>
+<Cell><Data ss:Type="String">EX</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">HL</Data></Cell>
+<Cell><Data ss:Type="String">Holiday Leave (Used)</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">HL</Data></Cell>
+<Cell><Data ss:Type="String">HL</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">HT</Data></Cell>
+<Cell><Data ss:Type="String">Holiday Time Used</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">YES</Data></Cell>
+<Cell><Data ss:Type="String">NO</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">ITO</Data></Cell>
+<Cell><Data ss:Type="String">Informal Time Off</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">ITO</Data></Cell>
+<Cell><Data ss:Type="String">ITO</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">JD</Data></Cell>
+<Cell><Data ss:Type="String">Jury Duty Used</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">JD</Data></Cell>
+<Cell><Data ss:Type="String">JD</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">LD</Data></Cell>
+<Cell><Data ss:Type="String">Personal Leave Program 2003</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">LD</Data></Cell>
+<Cell><Data ss:Type="String">LD</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">LP</Data></Cell>
+<Cell><Data ss:Type="String">Personal Leave Program 2010</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">LP</Data></Cell>
+<Cell><Data ss:Type="String">LP</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">LV</Data></Cell>
+<Cell><Data ss:Type="String">Personal Leave Program 2012</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">LV</Data></Cell>
+<Cell><Data ss:Type="String">LV</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">LX</Data></Cell>
+<Cell><Data ss:Type="String">Personal Leave Program 2020</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">LX</Data></Cell>
+<Cell><Data ss:Type="String">LX</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">MH</Data></Cell>
+<Cell><Data ss:Type="String">Military Leave Hours Used</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">MH</Data></Cell>
+<Cell><Data ss:Type="String">MH</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">PARR</Data></Cell>
+<Cell><Data ss:Type="String">PARR Leave</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">PARR</Data></Cell>
+<Cell><Data ss:Type="String">PARR</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">PH</Data></Cell>
+<Cell><Data ss:Type="String">Personal Holiday Used</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">PH</Data></Cell>
+<Cell><Data ss:Type="String">PH</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">PL</Data></Cell>
+<Cell><Data ss:Type="String">Personal Leave</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">PL</Data></Cell>
+<Cell><Data ss:Type="String">PL</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">PT</Data></Cell>
+<Cell><Data ss:Type="String">Professional Development Day</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">PT</Data></Cell>
+<Cell><Data ss:Type="String">PT</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">PV</Data></Cell>
+<Cell><Data ss:Type="String">Voluntary Personal Leave</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">PV</Data></Cell>
+<Cell><Data ss:Type="String">PV</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">SF</Data></Cell>
+<Cell><Data ss:Type="String">Sick Leave (Family) Used</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">SF</Data></Cell>
+<Cell><Data ss:Type="String">SF</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">SL</Data></Cell>
+<Cell><Data ss:Type="String">Sick Leave (Self) Used</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">SL</Data></Cell>
+<Cell><Data ss:Type="String">SL</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Leave</Data></Cell>
+<Cell><Data ss:Type="String">VA</Data></Cell>
+<Cell><Data ss:Type="String">Vacation Used</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">VA</Data></Cell>
+<Cell><Data ss:Type="String">VA</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Furlough Hours</Data></Cell>
+<Cell><Data ss:Type="String">FH</Data></Cell>
+<Cell><Data ss:Type="String">Furlough Hours Use only on Furlough Fridays (2/6/09, 2/20/09 and 3/6/09) If off on these dates due to furlough.</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">FH</Data></Cell>
+<Cell><Data ss:Type="String">FH</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Furlough Hours</Data></Cell>
+<Cell><Data ss:Type="String">FL</Data></Cell>
+<Cell><Data ss:Type="String">Furlough Leave Use when taking furlough hours on days other than Furlough Fridays.</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">FL</Data></Cell>
+<Cell><Data ss:Type="String">FL</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Holiday</Data></Cell>
+<Cell><Data ss:Type="String">HAWS</Data></Cell>
+<Cell><Data ss:Type="String">AWS on a Holiday R12 &amp; class code 1707 Only</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">YES</Data></Cell>
+<Cell><Data ss:Type="String">NO</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Holiday</Data></Cell>
+<Cell><Data ss:Type="String">HC</Data></Cell>
+<Cell><Data ss:Type="String">Holiday Credit (Earned)</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">HC</Data></Cell>
+<Cell><Data ss:Type="String">HC</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Holiday</Data></Cell>
+<Cell><Data ss:Type="String">HIW</Data></Cell>
+<Cell><Data ss:Type="String">Holiday ITO Earned</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">NO</Data></Cell>
+<Cell><Data ss:Type="String">YES</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Holiday</Data></Cell>
+<Cell><Data ss:Type="String">HP</Data></Cell>
+<Cell><Data ss:Type="String">Holiday Pay</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">HP</Data></Cell>
+<Cell><Data ss:Type="String">HP</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Holiday</Data></Cell>
+<Cell><Data ss:Type="String">HREG</Data></Cell>
+<Cell><Data ss:Type="String">REG substitution on Holiday</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">YES</Data></Cell>
+<Cell><Data ss:Type="String">NO</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Holiday</Data></Cell>
+<Cell><Data ss:Type="String">HTW</Data></Cell>
+<Cell><Data ss:Type="String">Time Worked on Holiday</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">NO</Data></Cell>
+<Cell><Data ss:Type="String">YES</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Holiday Overtime</Data></Cell>
+<Cell><Data ss:Type="String">H</Data></Cell>
+<Cell><Data ss:Type="String">Holiday 1/2 Time</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">H</Data></Cell>
+<Cell><Data ss:Type="String">N/A</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Holiday Overtime</Data></Cell>
+<Cell><Data ss:Type="String">H5</Data></Cell>
+<Cell><Data ss:Type="String">Holiday Pay, Straight Time</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">H5</Data></Cell>
+<Cell><Data ss:Type="String">N/A</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Holiday Overtime</Data></Cell>
+<Cell><Data ss:Type="String">H6</Data></Cell>
+<Cell><Data ss:Type="String">Holiday Pay, 1.5 Time</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">H6</Data></Cell>
+<Cell><Data ss:Type="String">N/A</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Comp Time</Data></Cell>
+<Cell><Data ss:Type="String">CT6</Data></Cell>
+<Cell><Data ss:Type="String">CTO @ Straight Time</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">CT6</Data></Cell>
+<Cell><Data ss:Type="String">N/A</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Comp Time</Data></Cell>
+<Cell><Data ss:Type="String">CT6T</Data></Cell>
+<Cell><Data ss:Type="String">Travel CTO Overtime-Straight Time</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">CT6T</Data></Cell>
+<Cell><Data ss:Type="String">N/A</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Comp Time</Data></Cell>
+<Cell><Data ss:Type="String">CT7</Data></Cell>
+<Cell><Data ss:Type="String">CTO @ 1.5 Time</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">CT7</Data></Cell>
+<Cell><Data ss:Type="String">N/A</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Comp Time</Data></Cell>
+<Cell><Data ss:Type="String">SB</Data></Cell>
+<Cell><Data ss:Type="String">Standby CTO</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">SB</Data></Cell>
+<Cell><Data ss:Type="String">N/A</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Overtime</Data></Cell>
+<Cell><Data ss:Type="String">OF6</Data></Cell>
+<Cell><Data ss:Type="String">FLSA OT @ 1.5 Time</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">OF6</Data></Cell>
+<Cell><Data ss:Type="String">N/A</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Overtime</Data></Cell>
+<Cell><Data ss:Type="String">OT5</Data></Cell>
+<Cell><Data ss:Type="String">Overtime-Straight Time</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">OT5</Data></Cell>
+<Cell><Data ss:Type="String">N/A</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Overtime</Data></Cell>
+<Cell><Data ss:Type="String">OT5T</Data></Cell>
+<Cell><Data ss:Type="String">Travel Overtime-Straight Time</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">OT5T</Data></Cell>
+<Cell><Data ss:Type="String">N/A</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Overtime</Data></Cell>
+<Cell><Data ss:Type="String">OT6</Data></Cell>
+<Cell><Data ss:Type="String">Overtime @ 1.5 Time</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">OT6</Data></Cell>
+<Cell><Data ss:Type="String">N/A</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Special Pay</Data></Cell>
+<Cell><Data ss:Type="String">8AC</Data></Cell>
+<Cell><Data ss:Type="String">Avalanche Control Pay</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">8AC</Data></Cell>
+<Cell><Data ss:Type="String">8AC</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Special Pay</Data></Cell>
+<Cell><Data ss:Type="String">8CPD</Data></Cell>
+<Cell><Data ss:Type="String">Climbing Pay</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">8CPD</Data></Cell>
+<Cell><Data ss:Type="String">8CPD</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Special Pay</Data></Cell>
+<Cell><Data ss:Type="String">8D1</Data></Cell>
+<Cell><Data ss:Type="String">Diving Pay</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">8D1</Data></Cell>
+<Cell><Data ss:Type="String">8D1</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Special Pay</Data></Cell>
+<Cell><Data ss:Type="String">8PLT</Data></Cell>
+<Cell><Data ss:Type="String">Pile Load Testing</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">8PLT</Data></Cell>
+<Cell><Data ss:Type="String">8PLT</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Special Pay</Data></Cell>
+<Cell><Data ss:Type="String">8SA</Data></Cell>
+<Cell><Data ss:Type="String">Special Assignment Pay</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">8SA</Data></Cell>
+<Cell><Data ss:Type="String">8SA</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Dock Pay</Data></Cell>
+<Cell><Data ss:Type="String">AWOL</Data></Cell>
+<Cell><Data ss:Type="String">Absent Without Leave</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">AWOL</Data></Cell>
+<Cell><Data ss:Type="String">AWOL</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Dock Pay</Data></Cell>
+<Cell><Data ss:Type="String">AWOP</Data></Cell>
+<Cell><Data ss:Type="String">Absent Without Pay</Data></Cell>
+<Cell><Data ss:Type="String">Yes</Data></Cell>
+<Cell><Data ss:Type="String">AWOP</Data></Cell>
+<Cell><Data ss:Type="String">AWOP</Data></Cell>
+</Row>
+<Row>
+<Cell><Data ss:Type="String">Other</Data></Cell>
+<Cell><Data ss:Type="String">NOHRS</Data></Cell>
+<Cell><Data ss:Type="String">No Hours</Data></Cell>
+<Cell><Data ss:Type="String">No</Data></Cell>
+<Cell><Data ss:Type="String">NOHRS</Data></Cell>
+<Cell><Data ss:Type="String">NOHRS</Data></Cell>
+</Row>
+</Table>
+</ss:Worksheet>
+</Workbook>
